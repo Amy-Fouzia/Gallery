@@ -1,6 +1,13 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+@import url(https://fonts.googleapis.com/css2?family=Shizuru&display=swap);
+@import url(https://fonts.googleapis.com/css2?family=Dela+Gothic+One&display=swap);
+
+*{
+  margin:0;
+  padding:0;
+}
 
 body {
   margin: 0;
