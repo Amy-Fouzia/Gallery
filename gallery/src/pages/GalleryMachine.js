@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import InfoSlip from './InfoSlip';
 import Coins from '../components/Coins';
-import machine from '../assets/toyvendor.jpeg';
+import machine from '../assets/toyvendor.png';
 
 const GalleryMachine = () => {
   const location = useLocation();
@@ -30,12 +30,12 @@ const GalleryMachine = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h1 className="text-2xl font-bold mb-4">Gallery Machine Page</h1>
+      <h1 className="font-poppins text-2xl font-bold mb-4">Palette Pod Dispenser</h1>
 
       {/* Insert Coin button */}
       <button
         onClick={handleInsertCoinClick}
-        className="bg-blue-500 text-white px-4 py-2 rounded"
+        class="font-poppins bg-silver-400 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
         disabled={coinCount === 0}
         style={{ alignSelf: 'center', marginBottom: '20px' }}
       >
@@ -44,7 +44,7 @@ const GalleryMachine = () => {
 
       <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
         {/* Image */}
-        <img src={machine} alt="Gallery Machine" style={{ width: '50%', height: 'auto' }} />
+        <img src={machine} alt="Gallery Machine" />
 
         {/* Display Coins component with coin count */}
         <Coins coinCount={coinCount} style={{ marginLeft: '20px' }} />

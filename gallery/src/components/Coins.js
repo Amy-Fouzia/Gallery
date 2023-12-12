@@ -4,7 +4,7 @@ import coinImage from '../assets/coin.png'; // Update the path accordingly
 const Coins = ({ coinCount }) => {
   return (
     <div>
-      <p> Coins Left: </p>
+      <p class="font-poppins"> Coins Left: </p>
     <div class="flex-col" style={{ display: 'flex', justifyContent: 'center', alignItems: 'center', minHeight: '50px' }}>
       {/* Display the coins based on the current coin count */}
       {Array.from({ length: coinCount }).map((_, index) => (

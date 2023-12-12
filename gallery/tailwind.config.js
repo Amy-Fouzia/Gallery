@@ -7,7 +7,8 @@ module.exports = {
     extend: {
       fontFamily: {
         'Shizuru': ['Shizuru', 'sans-serif'],
-        'delagothicone': ['Dela Gothic One']
+        'delagothicone': ['Dela Gothic One'],
+        'poppins': ['Poppins']
       },
     },
   },
