@@ -1,5 +1,5 @@
 import React from 'react';
-import ticket from '../assets/tick.png';
+import ticket from '../assets/ticket.png';
 import { Link, BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import GalleryMachine from '../pages/GalleryMachine';
 
