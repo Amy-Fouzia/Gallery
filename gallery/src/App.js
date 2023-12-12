@@ -12,8 +12,8 @@ const App = () => {
           <Link to="/gallery_machine"> Go to Gallery Machine </Link> <br></br>
         </div>
         <Routes>
-          <Route path="/gallery_machine" element={<GalleryMachine />} />
           <Route path="/entrance" element={<Entrance />} />
+          <Route path="/gallery_machine" element={<GalleryMachine />} />
         </Routes>
       </div>
     </Router>
