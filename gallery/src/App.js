@@ -8,9 +8,9 @@ const App = () => {
   return (
     <Router>
       <div style={{ textAlign: 'center', paddingTop: '20px' }}>
-        <h1 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '20px' }}>
+        <h1 class="font-delagothicone" style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '20px' }}>
           <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
-            Entrance Page
+            Entrance Page 
           </Link>{' '}
           <Link to="/galleryMachine?coins=3" style={{ textDecoration: 'none', color: 'black' }}>
             Gallery Machine

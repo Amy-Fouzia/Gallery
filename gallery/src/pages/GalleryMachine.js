@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
 import InfoSlip from './InfoSlip';
 import Coins from '../components/Coins';
+import machine from '../assets/toyvendor.jpeg';
 
 const GalleryMachine = () => {
   const location = useLocation();
@@ -30,11 +31,12 @@ const GalleryMachine = () => {
   return (
     <div>
       <h1 className="text-2xl font-bold mb-4">Gallery Machine Page</h1>
-
-      {/* Display Coins component with correct coin count */}
+      <div class="flex justify-center">
+      <img src={machine} />
+      {/* Display Coins component with coin count */}
       <Coins coinCount={coinCount} />
-
-      {/* Button to insert coin and navigate to InfoSlip */}
+      </div>
+      {/* Button to decrease the coin count */}
       <button
         onClick={handleInsertCoinClick}
         className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
