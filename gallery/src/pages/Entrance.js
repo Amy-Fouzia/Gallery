@@ -1,10 +1,13 @@
 import React from 'react';
+import TextChangeOnHover from '../components/TextChangeOnHover';
 import Ticket from '../components/Ticket';
+
 
 const Entrance = () => {
   return (
     <div>
-      <h1 className="text-2xl font-bold mb-4"> Welcome to the किस्मत Gallery</h1>
+      <h1 className="text-2xl font-bold mb-4"> Welcome to the</h1>
+      <TextChangeOnHover />
       <div class="flex flex-col justify-center">
       <h3> Hours: </h3>
       <table class="table-fixed"> 
