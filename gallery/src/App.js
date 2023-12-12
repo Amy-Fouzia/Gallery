@@ -12,7 +12,7 @@ const App = () => {
           <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
             Entrance Page
           </Link>{' '}
-          <Link to="/galleryMachine" style={{ textDecoration: 'none', color: 'black' }}>
+          <Link to="/galleryMachine?coins=3" style={{ textDecoration: 'none', color: 'black' }}>
             Gallery Machine
           </Link>
         </h1>
