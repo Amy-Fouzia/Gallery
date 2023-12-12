@@ -1,15 +1,32 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, Route, Routes, useLocation, useNavigate } from 'react-router-dom';
+import InfoSlip from './InfoSlip';
 import Coins from '../components/Coins';
 import machine from '../assets/toyvendor.jpeg';
 
 const GalleryMachine = () => {
-  const [coinCount, setCoinCount] = useState(3);
+  const location = useLocation();
+  const navigate = useNavigate();
 
-  const handleCoinButtonClick = () => {
-    // Decrease the coin count by 1
-    setCoinCount((prevCount) => Math.max(0, prevCount - 1));
+  // Parse the "coins" parameter from the URL
+  const initialCoinCount = parseInt(new URLSearchParams(location.search).get('coins'), 10);
+  const [coinCount, setCoinCount] = useState(initialCoinCount);
+
+  const handleInsertCoinClick = () => {
+    if (coinCount > 0) {
+      setCoinCount((prevCount) => {
+        const updatedCount = prevCount - 1;
+        navigate(`/infoSlip?coins=${updatedCount}`);
+        return updatedCount;
+      });
+    }
   };
+
+  useEffect(() => {
+    // Update coin count when the URL changes
+    const updatedCoinCount = parseInt(new URLSearchParams(location.search).get('coins'), 10);
+    setCoinCount(updatedCoinCount);
+  }, [location.search]);
 
   return (
     <div>
@@ -21,17 +38,21 @@ const GalleryMachine = () => {
       </div>
       {/* Button to decrease the coin count */}
       <button
-        onClick={handleCoinButtonClick}
+        onClick={handleInsertCoinClick}
         className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
         disabled={coinCount === 0}
       >
         Insert Coin
       </button>
 
-      {/* Link to navigate to Info Slip */}
-      <Link to="/infoSlip">
-        <button className="bg-blue-500 text-white px-4 py-2 rounded mt-4">Go to Info Slip</button>
-      </Link>
+      {/* Routes for GalleryMachine and InfoSlip */}
+      <Routes>
+        {/* Route for InfoSlip */}
+        <Route
+          path="/infoSlip"
+          element={<InfoSlip coinCount={coinCount} setCoinCount={setCoinCount} />}
+        />
+      </Routes>
     </div>
   );
 };
