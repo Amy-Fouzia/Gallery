@@ -8,8 +8,8 @@ const App = () => {
     <Router>
       <div>
         <div>
-          <Link to="/gallery_machine"> Go to Gallery Machine </Link> <br></br>
           <Link to="/entrance">Go to Entrance Page</Link> <br></br>
+          <Link to="/gallery_machine"> Go to Gallery Machine </Link> <br></br>
         </div>
         <Routes>
           <Route path="/gallery_machine" element={<GalleryMachine />} />
