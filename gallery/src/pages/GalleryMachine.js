@@ -29,21 +29,26 @@ const GalleryMachine = () => {
   }, [location.search]);
 
   return (
-    <div>
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
       <h1 className="text-2xl font-bold mb-4">Gallery Machine Page</h1>
-      <div class="flex justify-center">
-      <img src={machine} />
-      {/* Display Coins component with coin count */}
-      <Coins coinCount={coinCount} />
-      </div>
-      {/* Button to decrease the coin count */}
+
+      {/* Insert Coin button */}
       <button
         onClick={handleInsertCoinClick}
-        className="bg-blue-500 text-white px-4 py-2 rounded mt-4"
+        className="bg-blue-500 text-white px-4 py-2 rounded"
         disabled={coinCount === 0}
+        style={{ alignSelf: 'center', marginBottom: '20px' }}
       >
         Insert Coin
       </button>
+
+      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
+        {/* Image */}
+        <img src={machine} alt="Gallery Machine" style={{ width: '50%', height: 'auto' }} />
+
+        {/* Display Coins component with coin count */}
+        <Coins coinCount={coinCount} style={{ marginLeft: '20px' }} />
+      </div>
 
       {/* Routes for GalleryMachine and InfoSlip */}
       <Routes>
