@@ -10,7 +10,7 @@ const Ticket = () => {
     <div>
     <div class="flex flex-col justify-center">
         <img class="px-60" src={ticket} />
-        <h1 class="font-delagothicone"> 
+        <h1 class="font-sans p-7"> 
         <Link to="/galleryMachine?coins=3" style={{ textDecoration: 'none', color: 'black' }}>
             Collect ticket and Enter
           </Link>
