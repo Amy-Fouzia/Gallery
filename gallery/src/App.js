@@ -7,12 +7,17 @@ import InfoSlip from './pages/InfoSlip';
 const App = () => {
   return (
     <Router>
-      <div>
-        <div>
-          <Link to="/entrance">Go to Entrance Page</Link> <br></br>
-        </div>
+      <div style={{ textAlign: 'center', paddingTop: '20px' }}>
+        <h1 style={{ fontSize: '24px', fontWeight: 'bold', marginBottom: '20px' }}>
+          <Link to="/" style={{ textDecoration: 'none', color: 'black' }}>
+            Entrance Page
+          </Link>{' '}
+          <Link to="/galleryMachine" style={{ textDecoration: 'none', color: 'black' }}>
+            Gallery Machine
+          </Link>
+        </h1>
         <Routes>
-          <Route path="/entrance" element={<Entrance />} />
+          <Route path="/" element={<Entrance />} />
           <Route path="/galleryMachine" element={<GalleryMachine />} />
           <Route path="/infoSlip" element={<InfoSlip />} />
         </Routes>
