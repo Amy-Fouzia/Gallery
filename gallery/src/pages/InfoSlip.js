@@ -28,12 +28,11 @@ const InfoSlip = () => {
 
   return (
     <div>
-      <p>info slip</p>
       <RandomComponent />
 
       {/* Close button to navigate back to GalleryMachine */}
       <button onClick={handleCloseClick} className="bg-blue-500 text-white px-4 py-2 rounded mt-4">
-        Close
+        Keep
       </button>
     </div>
   );
