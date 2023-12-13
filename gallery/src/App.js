@@ -10,7 +10,7 @@ import Header from './components/Header';
 const App = () => {
   return (
     <Router>
-      <div class="text-dark-brown" style={{ textAlign: 'center', paddingTop: '20px' }}>
+      <div class="text-dark-brown" style={{ textAlign: 'center' }}>
         <Header />
         <br></br>
         <Routes>

@@ -12,7 +12,7 @@ const TextChangeOnHover = () => {
     };
   
     return (
-      <h1 class="font-delagothicone text-6xl font-bold pt-20 mb-4" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
+      <h1 class="font-delagothicone text-6xl font-bold pt-20" onMouseOver={handleMouseOver} onMouseOut={handleMouseOut}>
         {text}
       </h1>
     );

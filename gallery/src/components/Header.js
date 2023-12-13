@@ -6,7 +6,7 @@ import Exit from '../assets/EXIT.png';
 
 const Header = () => {
   return (
-    <div className="flex border-b-1.5 border-solid border-dark-brown bg-fae0af font-delagothicone">
+    <div className="flex bg-[#f8e097] font-delagothicone">
       <Link to="/" style={{ textDecoration: 'none', color: '#3E2723' }}>
         <img className=" " src={Exit} alt="Exit" />
       </Link>
