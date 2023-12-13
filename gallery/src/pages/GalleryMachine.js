@@ -30,25 +30,23 @@ const GalleryMachine = () => {
 
   return (
     <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
-      <h1 className="font-poppins text-2xl font-bold mb-4">Palette Pod Dispenser</h1>
+        <h1 className="font-poppins text-2xl font-bold my-4">Palette Pod Dispenser</h1>
 
+      {/* Display Coins component with coin count */}
+      <Coins coinCount={coinCount} style={{ marginTop: '20px', alignSelf: 'center' }} />
+    <br></br>
       {/* Insert Coin button */}
       <button
         onClick={handleInsertCoinClick}
-        class="font-poppins bg-silver-400 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
+        className="font-poppins bg-silver-400 hover:bg-yellow-300 text-black font-bold py-2 px-4 rounded transition duration-300 ease-in-out"
         disabled={coinCount === 0}
         style={{ alignSelf: 'center', marginBottom: '20px' }}
       >
         Insert Coin
       </button>
 
-      <div style={{ display: 'flex', flexDirection: 'row', alignItems: 'center' }}>
-        {/* Image */}
-        <img src={machine} alt="Gallery Machine" />
-
-        {/* Display Coins component with coin count */}
-        <Coins coinCount={coinCount} style={{ marginLeft: '20px' }} />
-      </div>
+      {/* Image */}
+      <img src={machine} alt="Gallery Machine" />
 
       {/* Routes for GalleryMachine and InfoSlip */}
       <Routes>
